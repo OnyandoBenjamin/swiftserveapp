@@ -1,0 +1,30 @@
+// SwiftServe App Scripts
+
+document.addEventListener('DOMContentLoaded', () => {
+    const pages = document.querySelectorAll('.page');
+    const menuItems = document.querySelectorAll('.menu-item');
+    const ordersList = document.querySelector('.orders-list');
+
+    // Show the correct page based on the hash in the URL
+    function showPage() {
+        const hash = window.location.hash || '#page1';
+        pages.forEach(page => {
+            page.style.display = page.id === hash.substring(1) ? 'block' : 'none';
+        });
+    }
+    
+    // Handle menu item selection
+    menuItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const itemName = item.textContent.trim();
+            const orderItem = document.createElement('li');
+            orderItem.textContent = itemName;
+            ordersList.appendChild(orderItem);
+            window.location.hash = '#page3';
+        });
+    });
+
+    // Update the page view on hash change
+    window.addEventListener('hashchange', showPage);
+    showPage();
+});

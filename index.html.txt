@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftServe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Page 1: User Info -->
+    <div id="page1" class="page">
+        <div class="overlay">
+            <h1>Welcome to SwiftServe</h1>
+            <form action="#page2">
+                <input type="text" placeholder="Enter your Name" required>
+                <input type="tel" placeholder="Enter your Phone Number" required>
+                <button type="submit">Start Ordering</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Page 2: Menu -->
+    <div id="page2" class="page">
+        <h2>Menu</h2>
+        <div class="menu-container">
+            <div class="menu-item" style="background-image: url('images/ugali-sukuma.jpg');">Ugali & Sukuma</div>
+            <div class="menu-item" style="background-image: url('images/nyamachoma.jpg');">Nyama Choma</div>
+            <div class="menu-item" style="background-image: url('images/chapati.jpg');">Chapati & Beans</div>
+            <div class="menu-item" style="background-image: url('images/biriyani.jpg');">Chicken Biriyani</div>
+            <div class="menu-item" style="background-image: url('images/mukimo.jpg');">Mukimo</div>
+            <div class="menu-item" style="background-image: url('images/mandazi.jpg');">Mandazi</div>
+            <div class="menu-item" style="background-image: url('images/samosa.jpg');">Samosa</div>
+            <div class="menu-item" style="background-image: url('images/pilau.jpg');">Pilau</div>
+            <div class="menu-item" style="background-image: url('images/fish.jpg');">Grilled Fish</div>
+            <div class="menu-item" style="background-image: url('images/githeri.jpg');">Githeri</div>
+        </div>
+    </div>
+
+    <!-- Page 3: Orders -->
+    <div id="page3" class="page">
+        <h2>Your Orders</h2>
+        <ul class="orders-list">
+            <!-- Orders will be listed here -->
+        </ul>
+        <button class="pay-button" onclick="location.href='#page4'">Pay Now</button>
+    </div>
+
+    <!-- Page 4: Confirmation -->
+    <div id="page4" class="page">
+        <h2>Your order has been received</h2>
+        <p>Thank you for ordering with SwiftServe!</p>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+

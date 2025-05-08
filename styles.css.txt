@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftServe - Food Ordering App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Page 1: User Details -->
+    <div class="page" id="page1">
+        <div class="overlay">
+            <h1>Welcome to SwiftServe</h1>
+            <input type="text" placeholder="Enter Your Name">
+            <input type="text" placeholder="Enter Your Phone Number">
+            <button onclick="goToPage(2)">Continue</button>
+        </div>
+    </div>
+
+    <!-- Page 2: Menu -->
+    <div class="page" id="page2" style="display:none;">
+        <h2>Our Menu</h2>
+        <div class="menu">
+            <div class="menu-item" style="background-image: url('images/burger.jpg');">Burger</div>
+            <div class="menu-item" style="background-image: url('images/pizza.jpg');">Pizza</div>
+            <div class="menu-item" style="background-image: url('images/salad.jpg');">Salad</div>
+            <div class="menu-item" style="background-image: url('images/steak.jpg');">Steak</div>
+            <div class="menu-item" style="background-image: url('images/pasta.jpg');">Pasta</div>
+            <div class="menu-item" style="background-image: url('images/fish.jpg');">Grilled Fish</div>
+            <div class="menu-item" style="background-image: url('images/soup.jpg');">Soup</div>
+            <div class="menu-item" style="background-image: url('images/tacos.jpg');">Tacos</div>
+            <div class="menu-item" style="background-image: url('images/chicken.jpg');">Grilled Chicken</div>
+            <div class="menu-item" style="background-image: url('images/fries.jpg');">Fries</div>
+        </div>
+        <button onclick="goToPage(3)">View Orders</button>
+    </div>
+
+    <!-- Page 3: Orders -->
+    <div class="page" id="page3" style="display:none;">
+        <h2>Your Orders</h2>
+        <ul id="order-list"></ul>
+        <button class="pay-btn" onclick="goToPage(4)">Pay</button>
+    </div>
+
+    <!-- Page 4: Order Confirmation -->
+    <div class="page" id="page4" style="display:none;">
+        <h2>Your Order Has Been Received</h2>
+        <p>Thank you for choosing SwiftServe!</p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+

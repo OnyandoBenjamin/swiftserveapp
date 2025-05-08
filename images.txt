@@ -1,0 +1,10 @@
+Burger.jpg
+pizza.jpg
+salad.jpg
+steak.jpg
+pasta.jpg
+fish.jpg
+soup.jpg
+Tacos.jpg
+chicken.jpg
+fries.jpg
